@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Vikrant657/YOU/portfolio.git', branch: 'main'
+                git url: 'https://github.com/Vikrant657/portfolio.git', branch: 'main'
             }
         }
 
@@ -21,7 +21,7 @@ pipeline {
                     git checkout -b gh-pages
                     git add .
                     git commit -m "Auto-deploy via Jenkins"
-                    git push -f https://${GITHUB_TOKEN}@github.com/YOUR_USERNAME/YOUR_REPO_NAME.git gh-pages
+                    git push -f https://${GITHUB_TOKEN}@github.com/vikrant657/portfolio.git gh-pages
                 '''
             }
         }
